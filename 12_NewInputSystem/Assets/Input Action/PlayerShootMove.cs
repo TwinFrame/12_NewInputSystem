@@ -171,7 +171,7 @@ public class @PlayerShootMove : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4e7d71a0-fe8d-4eb1-bbfb-5c2d498f8486"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",

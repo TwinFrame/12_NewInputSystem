@@ -44,6 +44,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "b083195d-0c3e-44f1-b79f-9f7ead05e6ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap"
+                },
+                {
+                    "name": "RowBoat",
+                    "type": "Value",
+                    "id": "9fe51057-3a86-466b-9a29-a0c8f8cb7259",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "RowBoat"
                 }
             ],
             "bindings": [
@@ -83,7 +99,7 @@
                 {
                     "name": "left",
                     "id": "fc543d43-dd69-403e-959b-e8c79786cdf1",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse",
@@ -94,7 +110,7 @@
                 {
                     "name": "right",
                     "id": "d4975373-a9b0-4b5c-af5e-1f8d4a7d855f",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse",
@@ -200,6 +216,50 @@
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f012ee98-c665-4305-aa96-8b50d433dd73",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "49291d70-05f3-42d6-a439-dcb7ab6ec8ab",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RowBoat",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9c6ce401-8237-4780-9599-d7bb6cadfc43",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "RowBoat",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d7e26826-d380-4090-9eec-e0753318028f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "RowBoat",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

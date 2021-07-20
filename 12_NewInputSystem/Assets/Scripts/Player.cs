@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +30,11 @@ public class Player : MonoBehaviour
 		_input.Player.PickUp.performed += ctx => TryOnPickUp();
 		_input.Player.Drop.performed += ctx => Throw(true);
 		_input.Player.Throw.performed += ctx => Throw();
+		_input.Player.Click.performed += ctx =>
+		{
+			if (ctx.interaction is MultiTapInteraction)
+				OnClick();
+		};
 	}
 
 	private void Update()
@@ -56,6 +63,9 @@ public class Player : MonoBehaviour
 
 	private void Throw(bool drop = false)
 	{
+		if (_currentObject == null)
+			return;
+
 		_currentObject.transform.parent = null;
 
 		_currentRigidbody.isKinematic = false;
@@ -87,5 +97,10 @@ public class Player : MonoBehaviour
 		_rotation.x = Mathf.Clamp(_rotation.x - rotate.y * scaleRotateSpeed, -90, 90);
 
 		transform.localEulerAngles = _rotation;
+	}
+
+	private void OnClick()
+	{
+		Debug.Log("Shoot");
 	}
 }
